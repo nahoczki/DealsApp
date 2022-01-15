@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zaz-Zg-3yG">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Ngt-oc-2rr">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mvt-FF-n4H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="zaz-Zg-3yG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ddN-0T-bOO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="AHb-L7-gwf" kind="relationship" relationship="rootViewController" id="QzX-tL-PNj"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-961" y="126"/>
+        </scene>
+        <!--Deals-->
+        <scene sceneID="ODn-TM-96v">
+            <objects>
+                <tableViewController title="Deals" id="AHb-L7-gwf" customClass="HomeTableViewController" customModule="DealsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="95" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="lfN-Qg-zC7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dealCell" rowHeight="85" id="o2Z-0S-ZdQ" customClass="DealCell" customModule="DealsApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="49.5" width="374" height="85"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o2Z-0S-ZdQ" id="G1E-kB-IhK">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="85"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cly-2e-SK0">
+                                            <rect key="frame" x="10" y="10" width="354" height="65"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lFb-dW-Ees">
+                                                    <rect key="frame" x="0.0" y="0.0" width="75" height="65"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="75" id="bcE-Rz-b1s"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="pvO-JS-aSa">
+                                                    <rect key="frame" x="85" y="0.0" width="269" height="65"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coach Outlet Rose-Print Tote $113 Shipped" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2C-xq-6oi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="269" height="36"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Coach City Tote  with Floral Bow Print, listed at $350, drops to $87.50 at Coach Outlet. Thi..." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iF5-VV-d59">
+                                                            <rect key="frame" x="0.0" y="36" width="269" height="29"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="cly-2e-SK0" secondAttribute="bottom" constant="10" id="6Gl-Nh-urW"/>
+                                        <constraint firstItem="cly-2e-SK0" firstAttribute="top" secondItem="G1E-kB-IhK" secondAttribute="top" constant="10" id="Nie-GI-IKd"/>
+                                        <constraint firstItem="cly-2e-SK0" firstAttribute="leading" secondItem="G1E-kB-IhK" secondAttribute="leading" constant="10" id="YMJ-oz-wm8"/>
+                                        <constraint firstAttribute="trailing" secondItem="cly-2e-SK0" secondAttribute="trailing" constant="10" id="cVb-dl-fMw"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dealImage" destination="lFb-dW-Ees" id="UeM-6C-G1x"/>
+                                    <outlet property="descriptionLabel" destination="iF5-VV-d59" id="fQi-PB-gGb"/>
+                                    <outlet property="titleLabel" destination="U2C-xq-6oi" id="qGG-Zs-z3H"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AHb-L7-gwf" id="bBC-gn-J1O"/>
+                            <outlet property="delegate" destination="AHb-L7-gwf" id="7eb-pq-6Yd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Deals" id="eU4-ao-Wv3"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h8r-Xv-BiU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="126"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
