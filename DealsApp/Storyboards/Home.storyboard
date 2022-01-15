@@ -90,10 +90,23 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Deals" id="eU4-ao-Wv3"/>
+                    <connections>
+                        <segue destination="Ylc-dA-FpC" kind="show" identifier="dealSegue" id="UTo-g2-yne"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h8r-Xv-BiU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-100" y="126"/>
+        </scene>
+        <!--Deal-->
+        <scene sceneID="rik-8a-mwZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Deal" id="Ylc-dA-FpC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="b9t-zq-iu1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H0p-HU-apE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="599" y="126"/>
         </scene>
     </scenes>
     <resources>

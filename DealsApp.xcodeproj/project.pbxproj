@@ -12,6 +12,7 @@
 		8F751E2E4BA7326A9B5465E5 /* Pods_DealsApp_DealsAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 601F0DF70C08215ADD9BBEC1 /* Pods_DealsApp_DealsAppUITests.framework */; };
 		9C3690E72793414300B0AA20 /* DealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3690E62793414300B0AA20 /* DealCell.swift */; };
 		9C3690E92793499800B0AA20 /* UIImageViewWithLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3690E82793499800B0AA20 /* UIImageViewWithLoader.swift */; };
+		9C3690ED27935CD500B0AA20 /* DealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3690EC27935CD500B0AA20 /* DealViewController.swift */; };
 		9CA27755279266E2004C9DDD /* Deal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA27754279266E2004C9DDD /* Deal.swift */; };
 		9CA27757279266EC004C9DDD /* DealGrabber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA27756279266EC004C9DDD /* DealGrabber.swift */; };
 		9CA2775A2792674C004C9DDD /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA277592792674C004C9DDD /* Home.storyboard */; };
@@ -53,6 +54,7 @@
 		8F506DDD2793FAF7119EC43C /* Pods_DealsAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DealsAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C3690E62793414300B0AA20 /* DealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealCell.swift; sourceTree = "<group>"; };
 		9C3690E82793499800B0AA20 /* UIImageViewWithLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewWithLoader.swift; sourceTree = "<group>"; };
+		9C3690EC27935CD500B0AA20 /* DealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealViewController.swift; sourceTree = "<group>"; };
 		9CA27754279266E2004C9DDD /* Deal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deal.swift; sourceTree = "<group>"; };
 		9CA27756279266EC004C9DDD /* DealGrabber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DealGrabber.swift; sourceTree = "<group>"; };
 		9CA277592792674C004C9DDD /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				9CA27760279269FB004C9DDD /* HomeTableViewController.swift */,
+				9C3690EC27935CD500B0AA20 /* DealViewController.swift */,
 				9C3690E62793414300B0AA20 /* DealCell.swift */,
 			);
 			path = ViewControllers;
@@ -468,6 +471,7 @@
 				9CAA11722792619900E14516 /* SceneDelegate.swift in Sources */,
 				9C3690E92793499800B0AA20 /* UIImageViewWithLoader.swift in Sources */,
 				9CA2775F27926843004C9DDD /* Constants.swift in Sources */,
+				9C3690ED27935CD500B0AA20 /* DealViewController.swift in Sources */,
 				9C3690E72793414300B0AA20 /* DealCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

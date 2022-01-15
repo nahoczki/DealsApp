@@ -11,6 +11,7 @@ class HomeTableViewController: UITableViewController {
     
     let dealGrabber : DealGrabber = DealGrabber()
     var dealsArr : Array<Deal> = []
+    var selectedCell : DealCell?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,15 +55,29 @@ class HomeTableViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCell = tableView.cellForRow(at: indexPath) as? DealCell
+        performSegue(withIdentifier: "dealSegue", sender: self)
+    }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let dest = segue.destination as? DealViewController {
+            guard let selCell = selectedCell else {
+                return
+            }
+            
+            dest.image = selCell.dealImage.image
+            dest.deal = selCell.deal
+            
+        }
     }
-    */
+    
 
 }
