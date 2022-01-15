@@ -13,7 +13,7 @@ class DealCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var dealImage: UIImageView!
+    @IBOutlet weak var dealImage: UIImageViewWithLoader!
     
 
     override func awakeFromNib() {

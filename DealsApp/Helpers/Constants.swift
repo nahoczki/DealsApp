@@ -15,4 +15,10 @@ struct Constants {
     
     }
     
+    struct Styling {
+        
+        static let imageCornerRadius = 10.0
+        
+    }
+    
 }

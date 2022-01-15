@@ -43,7 +43,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cly-2e-SK0">
                                             <rect key="frame" x="10" y="10" width="354" height="65"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lFb-dW-Ees">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lFb-dW-Ees" customClass="UIImageViewWithLoader" customModule="DealsApp" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="75" height="65"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="75" id="bcE-Rz-b1s"/>

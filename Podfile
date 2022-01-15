@@ -8,6 +8,7 @@ target 'DealsApp' do
   # Pods for DealsApp
   pod 'Alamofire'
   pod 'SwiftyJSON'
+  pod 'AlamofireImage'
 
   target 'DealsAppTests' do
     inherit! :search_paths

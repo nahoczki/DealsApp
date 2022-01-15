@@ -14,6 +14,8 @@ class HomeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
 
         dealGrabber.getDeals {deals, err in
             if let err = err {
@@ -47,6 +49,7 @@ class HomeTableViewController: UITableViewController {
         cell.deal = deal
         cell.titleLabel.text = deal.title
         cell.descriptionLabel.text = deal.shortDescription
+        cell.dealImage.loadImage(mediaUrl: deal.image)
         
 
         return cell
