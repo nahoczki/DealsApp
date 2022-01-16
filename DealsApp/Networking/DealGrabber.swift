@@ -29,8 +29,11 @@ class DealGrabber {
                     let shortDescription = deal["description_preview"].stringValue
                     let longDescription = deal["description"].stringValue
                     let image = deal["image_urls"]["original"].stringValue
+                    let couponCode = deal["coupon_code"].stringValue
+                    let editor = deal["editor"].stringValue
+                    let goLink = deal["go_link"].stringValue
                     
-                    dealsReturn.append(Deal(title: title, shortDescription: shortDescription, longDescription: longDescription, image: image))
+                    dealsReturn.append(Deal(title: title, shortDescription: shortDescription, longDescription: longDescription, image: image, couponCode: couponCode, editor: editor, goLink: goLink))
                 }
                 
                 completion(dealsReturn, nil)

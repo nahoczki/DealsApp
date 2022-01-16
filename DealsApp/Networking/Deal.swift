@@ -12,4 +12,7 @@ struct Deal {
     var shortDescription: String
     var longDescription: String
     var image: String
+    var couponCode: String
+    var editor: String
+    var goLink: String
 }

@@ -28,19 +28,56 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cIO-BP-De3">
                                         <rect key="frame" x="0.0" y="270" width="374" height="548"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Text" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6F-G0-d2o">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="8zh-0r-UUc">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="40.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Text" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6F-G0-d2o">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posted by: zoli" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5U-XN-yH3">
+                                                        <rect key="frame" x="0.0" y="26" width="374" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                             <wkWebView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9XL-CS-bdx">
-                                                <rect key="frame" x="0.0" y="34" width="374" height="514"/>
+                                                <rect key="frame" x="0.0" y="50.5" width="374" height="417"/>
                                                 <wkWebViewConfiguration key="configuration">
                                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                                     <wkPreferences key="preferences"/>
                                                 </wkWebViewConfiguration>
                                             </wkWebView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="pMW-tK-HUx">
+                                                <rect key="frame" x="0.0" y="477.5" width="374" height="70.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code: tester" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9b-s5-vUy">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fD-JT-lzF">
+                                                        <rect key="frame" x="0.0" y="20.5" width="374" height="50"/>
+                                                        <color key="backgroundColor" red="0.3294117647" green="0.62352941179999999" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="e4a-Rr-aSf"/>
+                                                        </constraints>
+                                                        <color key="tintColor" red="0.3294117647" green="0.62352941179999999" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Go to Deal">
+                                                            <color key="baseBackgroundColor" red="0.3294117647" green="0.62352941179999999" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="goOnClick:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2Ug-EH-che"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -56,9 +93,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dealCode" destination="v9b-s5-vUy" id="vK4-ls-iDp"/>
                         <outlet property="dealDescriptionWebView" destination="9XL-CS-bdx" id="8qS-hu-ZB4"/>
                         <outlet property="dealImage" destination="iN6-mf-1ez" id="AXz-HJ-Usw"/>
+                        <outlet property="dealPosted" destination="L5U-XN-yH3" id="Qn7-TF-cOZ"/>
                         <outlet property="dealTitle" destination="e6F-G0-d2o" id="rgZ-fY-TRv"/>
+                        <outlet property="goButton" destination="8fD-JT-lzF" id="1Zf-oc-NRy"/>
                     </connections>
                 </viewController>
                 <navigationItem title=" " id="exZ-eI-yiA"/>
