@@ -12,9 +12,10 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mvt-FF-n4H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="zaz-Zg-3yG" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ddN-0T-bOO">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ddN-0T-bOO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.32941176470588235" green="0.62352941176470589" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="AHb-L7-gwf" kind="relationship" relationship="rootViewController" id="QzX-tL-PNj"/>
@@ -34,7 +35,7 @@
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="dealCell" rowHeight="85" id="o2Z-0S-ZdQ" customClass="DealCell" customModule="DealsApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="49.5" width="374" height="85"/>
+                                <rect key="frame" x="20" y="32" width="374" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o2Z-0S-ZdQ" id="G1E-kB-IhK">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="85"/>
@@ -89,7 +90,9 @@
                             <outlet property="delegate" destination="AHb-L7-gwf" id="7eb-pq-6Yd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Deals" id="eU4-ao-Wv3"/>
+                    <navigationItem key="navigationItem" title="Deals" id="eU4-ao-Wv3">
+                        <barButtonItem key="backBarButtonItem" title=" " id="BGo-QU-SHh"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="Ylc-dA-FpC" kind="show" identifier="dealSegue" id="UTo-g2-yne"/>
                     </connections>

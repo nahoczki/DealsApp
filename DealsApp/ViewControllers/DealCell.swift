@@ -16,15 +16,4 @@ class DealCell: UITableViewCell {
     @IBOutlet weak var dealImage: UIImageViewWithLoader!
     
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class DealViewController: UIViewController, WKNavigationDelegate {
+class DealViewController: UIViewController{
 
     @IBOutlet weak var dealImage: UIImageView!
     @IBOutlet weak var dealTitle: UILabel!
@@ -21,10 +21,11 @@ class DealViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set element content
         dealImage.image = image
         dealTitle.text = deal.title
-        //dealDescription.text = deal.longDescription
         
+        // Prepare HTML
         let htmlToDisplay = """
                                 <html>
                                 \(Constants.Styling.descriptionCSS)
@@ -34,29 +35,13 @@ class DealViewController: UIViewController, WKNavigationDelegate {
                                 </html>
                             """
         
+        // Load HTML
         dealDescriptionWebView.loadHTMLString(htmlToDisplay, baseURL: nil)
-        dealDescriptionWebView.navigationDelegate = self
 
-        // Do any additional setup after loading the view.
     }
     
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        guard navigationAction.navigationType == .other || navigationAction.navigationType == .reload  else {
-                decisionHandler(.cancel)
-                return
-            }
-            decisionHandler(.allow)
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.largeTitleDisplayMode = .never
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -15,16 +15,14 @@ class HomeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.navigationBar.prefersLargeTitles = true
 
         dealGrabber.getDeals {deals, err in
             if let err = err {
-                fatalError(err)
+                // Err will happen if status code != 200 && Data not recieved
+                print(err)
             } else {
                 self.dealsArr = deals
                 self.tableView.reloadData()
-                // Do something
             }
         }
     }
@@ -32,12 +30,10 @@ class HomeTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return dealsArr.count
     }
 
@@ -58,16 +54,14 @@ class HomeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCell = tableView.cellForRow(at: indexPath) as? DealCell
+        tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "dealSegue", sender: self)
     }
 
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
         if let dest = segue.destination as? DealViewController {
             guard let selCell = selectedCell else {
                 return

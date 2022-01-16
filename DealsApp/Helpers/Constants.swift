@@ -23,7 +23,7 @@ struct Constants {
                                         <style>
                                             body {
                                                 font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-                                                font-size: 55px;
+                                                font-size: 50px;
                                             }
                                             a {
                                                 color: #549F93;

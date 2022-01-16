@@ -11,6 +11,7 @@ import SwiftyJSON
 
 class DealGrabber {
     
+    // Creates get request to API; Completes with either ([Deal], nil) or ([], "Error msg")
     func getDeals(_ completion : @escaping (Array<Deal>, String?) -> ()) {
         AF.request(Constants.API.URL, method: .get).response { res in
             if (res.response?.statusCode != 200) {
