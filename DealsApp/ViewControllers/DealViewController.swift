@@ -9,7 +9,7 @@ import UIKit
 import WebKit
 import SafariServices
 
-class DealViewController: UIViewController{
+class DealViewController: UIViewController, WKNavigationDelegate{
     
     @IBOutlet weak var dealImageView: UIImageView!
     @IBOutlet weak var dealTitleLabel: UILabel!
@@ -49,6 +49,8 @@ class DealViewController: UIViewController{
         // Load HTML
         dealDescriptionWebView.loadHTMLString(htmlToDisplay, baseURL: nil)
         
+        dealDescriptionWebView.navigationDelegate = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,6 +68,14 @@ class DealViewController: UIViewController{
             let vc = SFSafariViewController(url: url, configuration: config)
             present(vc, animated: true)
         }
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        guard navigationAction.navigationType == .other || navigationAction.navigationType == .reload  else {
+            decisionHandler(.cancel)
+            return
+        }
+        decisionHandler(.allow)
     }
     
     

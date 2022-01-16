@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Hel-fl-wxy">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <rect key="frame" x="20" y="44" width="374" height="808"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iN6-mf-1ez">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="250"/>
@@ -26,7 +26,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cIO-BP-De3">
-                                        <rect key="frame" x="0.0" y="270" width="374" height="548"/>
+                                        <rect key="frame" x="0.0" y="270" width="374" height="538"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="8zh-0r-UUc">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="40.5"/>
@@ -45,15 +45,15 @@
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <wkWebView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9XL-CS-bdx">
-                                                <rect key="frame" x="0.0" y="50.5" width="374" height="417"/>
+                                            <wkWebView contentMode="scaleToFill" allowsLinkPreview="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XL-CS-bdx">
+                                                <rect key="frame" x="0.0" y="50.5" width="374" height="407"/>
                                                 <wkWebViewConfiguration key="configuration">
                                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                                     <wkPreferences key="preferences"/>
                                                 </wkWebViewConfiguration>
                                             </wkWebView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="pMW-tK-HUx">
-                                                <rect key="frame" x="0.0" y="477.5" width="374" height="70.5"/>
+                                                <rect key="frame" x="0.0" y="467.5" width="374" height="70.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code: tester" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9b-s5-vUy">
                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="19.5"/>
@@ -86,7 +86,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Hel-fl-wxy" secondAttribute="bottom" id="1pR-8B-qT6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Hel-fl-wxy" secondAttribute="bottom" constant="10" id="1pR-8B-qT6"/>
                             <constraint firstItem="Hel-fl-wxy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="9dl-en-7Hl"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Hel-fl-wxy" secondAttribute="trailing" constant="20" id="FGw-QT-dc0"/>
                             <constraint firstItem="Hel-fl-wxy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ZoN-ur-qgx"/>
