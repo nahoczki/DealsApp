@@ -11,11 +11,11 @@ import SafariServices
 
 class DealViewController: UIViewController{
     
-    @IBOutlet weak var dealImage: UIImageView!
-    @IBOutlet weak var dealTitle: UILabel!
+    @IBOutlet weak var dealImageView: UIImageView!
+    @IBOutlet weak var dealTitleLabel: UILabel!
     @IBOutlet weak var dealDescriptionWebView: WKWebView!
-    @IBOutlet weak var dealPosted: UILabel!
-    @IBOutlet weak var dealCode: UILabel!
+    @IBOutlet weak var dealPostedLabel: UILabel!
+    @IBOutlet weak var dealCodeLabel: UILabel!
     @IBOutlet weak var goButton: UIButton!
     
     
@@ -27,13 +27,13 @@ class DealViewController: UIViewController{
         super.viewDidLoad()
         
         // Set element content
-        dealImage.image = image
-        dealTitle.text = deal.title
-        dealPosted.text = "Posted by \(deal.editor)"
-        dealCode.text = "Code: \(deal.couponCode)"
+        dealImageView.image = image
+        dealTitleLabel.text = deal.title
+        dealPostedLabel.text = "Posted by \(deal.editor)"
+        dealCodeLabel.text = "Code: \(deal.couponCode)"
         
         if (deal.couponCode == "") {
-            dealCode.isHidden = true
+            dealCodeLabel.isHidden = true
         }
         
         // Prepare HTML

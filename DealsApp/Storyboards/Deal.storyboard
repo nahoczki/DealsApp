@@ -93,11 +93,11 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="dealCode" destination="v9b-s5-vUy" id="vK4-ls-iDp"/>
+                        <outlet property="dealCodeLabel" destination="v9b-s5-vUy" id="LV8-Z0-VWf"/>
                         <outlet property="dealDescriptionWebView" destination="9XL-CS-bdx" id="8qS-hu-ZB4"/>
-                        <outlet property="dealImage" destination="iN6-mf-1ez" id="AXz-HJ-Usw"/>
-                        <outlet property="dealPosted" destination="L5U-XN-yH3" id="Qn7-TF-cOZ"/>
-                        <outlet property="dealTitle" destination="e6F-G0-d2o" id="rgZ-fY-TRv"/>
+                        <outlet property="dealImageView" destination="iN6-mf-1ez" id="glP-o8-3tP"/>
+                        <outlet property="dealPostedLabel" destination="L5U-XN-yH3" id="Cbs-Dx-UrC"/>
+                        <outlet property="dealTitleLabel" destination="e6F-G0-d2o" id="EUH-Wh-Jjo"/>
                         <outlet property="goButton" destination="8fD-JT-lzF" id="1Zf-oc-NRy"/>
                     </connections>
                 </viewController>
